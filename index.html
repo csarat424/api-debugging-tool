@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Debugging Toolkit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>API Debugging Toolkit</h1>
+    <form id="apiForm">
+      <label for="endpoint">API Endpoint:</label>
+      <input type="text" id="endpoint" placeholder="https://api.example.com/resource" required>
+      
+      <label for="method">HTTP Method:</label>
+      <select id="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      
+      <label for="headers">Headers (JSON format):</label>
+      <textarea id="headers" placeholder='{"Authorization": "Bearer token"}'></textarea>
+      
+      <label for="body">Body (JSON for POST/PUT):</label>
+      <textarea id="body" placeholder='{"key": "value"}'></textarea>
+      
+      <button type="submit">Send Request</button>
+    </form>
+    <div id="response">
+      <h2>Response:</h2>
+      <pre id="responseData"></pre>
+    </div>
+  </div>
+  
+  <p>Guide: <a href="https://shopify.dev/docs" target="_blank">How to Generate API Keys</a></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
